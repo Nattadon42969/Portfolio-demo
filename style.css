@@ -32,6 +32,30 @@ nav {
     list-style: none;
     width: 120px;
     text-align: center;
+    position: relative;
+}
+
+.dropdown-menu ul li {
+    width: 100%;
+    height: auto !important;     /* ยกเลิกความสูงจากเมนูหลัก */
+    line-height: normal !important; /* ยกเลิก line-height สูงๆ */
+    margin: 0 !important;
+}
+
+.dropdown-menu ul li a:hover {
+    background: #004600;
+    width: 100%;
+}
+
+.dropdown-menu ul li a {
+    display: block;
+    padding: 12px 20px;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.2s ease;
 }
 
 .menu li:hover {
@@ -47,6 +71,39 @@ nav {
 .menu a {
     font-size: 1.4rem;
     line-height: 5.5rem;
+}
+
+.dropdown-menu {
+    background: #006000;
+    min-width: 160px;
+    position: absolute;
+    top: 100%;                 /* วางต่อใต้ปุ่ม Menu ทันที */
+    left: 50%;
+    transform: translateX(-50%); /* จัดวางกึ่งกลางปุ่ม Menu */
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100;
+    border-radius: 8px;        /* มุมโค้งมน */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); /* เงาลอยนุ่มๆ */
+    overflow: hidden;
+    transition: all 0.25s ease-in-out; /* แอนิเมชันการแสดงผล */
+    margin-top: 12px;           /* ระยะก่อนเด้งลงมา */
+}
+
+.dropdown-menu.show {
+    opacity: 1 !important;
+    visibility: visible !important;
+    margin-top: 0px;            /* ขยับลงมาตำแหน่งจริงแบบนุ่มนวล */
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    width: 100%;
 }
 
 a {
@@ -75,11 +132,25 @@ a {
 
 .Name {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-left: 600px;
+    margin-left: 500px;
     width: 100%;
+}
+
+.Name a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.Name h2 {
+    font-size: 2.5rem;
+}
+
+.Name h2 a {
+    font-size: 1.6rem;
 }
 
 .gradient {
@@ -105,60 +176,175 @@ a {
     margin-left: 40px;
 }
 
+.Profile-image {
+    width: 400px;
+    height: 400px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    border: 4px solid white;
+    background-size: cover;
+    margin-left: 40px;
+}
+
+.OpenToonz {
+    width: 100%;
+    height: auto;
+}
+
 .Profile-content {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-left: 40px;
     margin-right: 40px;
+    margin-top: 40px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 20px;
 }
 
 .Profile-Name a {
     color: black;
 }
 
+.Profile-Name a d {
+    font-size: 1.3rem;
+}
+
 .Profile-Nickname a {
     color: black;
 }
 
-.Profile-Age a {
-    color: black;
+.Profile-Nickname a d {
+    font-size: 1.3rem;
 }
 
 .Profile-Birthday a {
     color: black;
 }
 
+.Profile-Birthday a d {
+    font-size: 1.3rem;
+}
+
+.Profile-Blood a {
+    color: black;
+}
+
+.Profile-Blood a d {
+    font-size: 1.3rem;
+}
+
 .Profile-Race a {
     color: black;
+}
+
+.Profile-Race a d {
+    font-size: 1.3rem;
 }
 
 .Profile-Nationality a {
     color: black;
 }
 
+.Profile-Nationality a d {
+    font-size: 1.3rem;
+}
+
 .Profile-Religion a {
     color: black;
+}
+
+.Profile-Religion a d {
+    font-size: 1.3rem;
 }
 
 .Profile-Address a {
     color: black;
 }
 
-.Profile-Personality a {
-    color: black;
+.Profile-Address a d {
+    font-size: 1.3rem;
 }
 
 .Profile-Hobby a {
     color: black;
 }
 
+.Profile-Hobby a d {
+    font-size: 1.3rem;
+}
+
 .Profile-charisma a {
     color: black;
 }
 
-@media screen and (max-width: 1000px) {
+.Profile-charisma a d {
+    font-size: 1.3rem;
+}
+
+.Profile-family {
+    font-size: 1.2rem;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.Profile-Father {
+    margin-left: 20px;
+    margin-top: 16px;
+}
+
+.Profile-Father a {
+    font-size: 1.5rem;
+    color: black;
+}
+
+.Profile-Mother {
+    margin-left: 20px;
+    margin-top: 16px;
+}
+
+.Profile-Mother a {
+    font-size: 1.5rem;
+    color: black;
+}
+
+@media screen and (max-width: 2049px) {
+    .Name {
+        flex-direction: column;
+    }
+
+    .Name h2 {
+        font-size: 0.4rem;
+        color: var(--primary-color);
+    }
+}
+
+@media screen and (max-width: 1069px) {
+    .Profile-content {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .Profile-content-and-image {
+        display: flex;
+    }
+
+    .Profile-image {
+        width: 300px;
+        height: 300px;
+    }
+
+    .Profile-family {
+        margin-left: 348px;
+    }
+}
+
+@media screen and (max-width: 1007px) {
     .profile-pic {
         width: 100%;
         height: 80vw;
@@ -173,7 +359,7 @@ a {
     }
 
     .header-content {
-        height: 108vw;
+        height: 142vw;
         flex-direction: column;
     }
 
@@ -181,16 +367,319 @@ a {
         margin-left: 0px;
         margin-bottom: 10%;
     }
+
+    .Name h2 {
+        font-size: 0.25rem;
+    }
+
+    .Profile-image {
+        width: 250px;
+        height: 250px;
+    }
+
+    .Profile-family {
+        margin-left: 280px;
+    }
+}
+
+@media screen and (max-width: 915px) {
+    .Profile-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .Profile-family {
+        margin-left: 240px;
+    }
 }
 
 @media screen and (max-width: 860px) {
+    .logo {
+        font-size: 1rem;
+        margin-left: 40px;
+    }
+
+    .menu a {
+    font-size: 1.2rem;
+    line-height: 5.5rem;
+}
+
     .header-content {
-        height: 120vw;
+        height: 144vw;
         flex-direction: column;
     }
 
     .Name {
         margin-left: 0px;
-        margin-bottom: 14%;
+        margin-bottom: 10%;
+    }
+
+    .Profile-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .Profile-family {
+        margin-left: 220px;
+    }
+}
+
+@media screen and (max-width: 777px) {
+    .header-content {
+        height: 146vw;
+        flex-direction: column;
+    }
+
+    .Name {
+        margin-left: 0px;
+        margin-bottom: 6%;
+    }
+
+    .Profile-image {
+        width: 250px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 708px) {
+    .header-content {
+        height: 150vw;
+        flex-direction: column;
+    }
+
+    .Name {
+        margin-left: 0px;
+        margin-bottom: 4%;
+    }
+
+    .Profile-image {
+        width: 300px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 701px) {
+    .menu a {
+    font-size: 0.8rem;
+    line-height: 5.5rem;
+    }
+
+    .logo {
+        font-size: 0.8rem;
+        margin-left: 40px;
+    }
+
+    .menu li {
+        width: 100px;
+    }
+
+    .menu li:hover {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 651px) {
+    .menu li {
+        width: 80px;
+    }
+
+    .menu li:hover {
+        width: 80px;
+    }
+
+    .Profile-image {
+        width: 350px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 637px) {
+    .header-content {
+        height: 160vw;
+        flex-direction: column;
+    }
+
+    .Name {
+        margin-left: 0px;
+        margin-bottom: 4%;
+    }
+
+    .Profile-image {
+        width: 400px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 569px) {
+    .header-content {
+        height: 180vw;
+        flex-direction: column;
+    }
+
+    .Name {
+        margin-left: 0px;
+        margin-bottom: 10%;
+    }
+
+    .Profile-image {
+        width: 550px;
+        height: 200px;
+    }
+
+    .dropdown-menu ul li a:hover {
+        background: #004600;
+        width: 200%;
+    }
+}
+
+@media screen and (max-width: 535px) {
+    .Profile-content-and-image {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Profile-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .Profile-content {
+        font-size: 1.2rem;
+    }
+
+    .Profile-Name a d {
+        font-size: 1.05rem;
+    }
+
+    .Profile-Nickname a d {
+        font-size: 1.05rem;
+    }
+    .Profile-Birthday a d {
+        font-size: 1.05rem;
+    }
+
+    .Profile-Blood a d {
+        font-size: 1.05rem;
+    }
+
+    .Profile-Race a d {
+        font-size: 1.05rem;
+    }
+
+    .Profile-Nationality a d {
+        font-size: 1.05rem;
+    }
+
+    .Profile-Religion a d {
+        font-size: 1.05rem;
+    }
+
+    .Profile-Address a d {
+        font-size: 1.05rem;
+    }
+
+    .Profile-Hobby a d {
+        font-size: 1.05rem;
+    }
+
+    .Profile-charisma a d {
+        font-size: 1.05rem;
+    }
+
+    .Profile-family {
+        font-size: 1rem;
+        margin-left: 30px;
+    }
+
+    .Profile-Father {
+        margin-left: 10px;
+        margin-top: 16px;
+    }
+
+    .Profile-Father a {
+        font-size: 1rem;
+    }
+
+    .Profile-Mother {
+        margin-left: 10px;
+        margin-top: 16px;
+    }
+
+    .Profile-Mother a {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .Name {
+        margin-left: 0px;
+        margin-bottom: 4%;
+    }
+}
+
+@media screen and (max-width: 465px) {
+    .menu a {
+    font-size: 0.6rem;
+    line-height: 5.5rem;
+    }
+
+    .logo {
+        font-size: 0.6rem;
+        margin-left: 40px;
+    }
+
+    .menu li {
+        width: 60px;
+    }
+
+    .menu li:hover {
+        width: 60px;
+    }
+
+    .header-content {
+        height: 170vw;
+        flex-direction: column;
+    }
+
+    .Name {
+        font-size: 0.7rem;
+        margin-left: 0px;
+        margin-bottom: 4%;
+    }
+
+    .Profile {
+        font-size: 1rem;
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 369px) {
+    .menu a {
+    font-size: 0.3rem;
+    line-height: 5.5rem;
+    }
+
+    .logo {
+        font-size: 0.4rem;
+        margin-left: 10px;
+    }
+
+    .menu li {
+        width: 30px;
+    }
+
+    .menu li:hover {
+        width: 30px;
+    }
+
+    .header-content {
+        height: 200vw;
+        flex-direction: column;
+    }
+
+    .Name {
+        font-size: 0.4rem;
+        margin-left: 0px;
+        margin-bottom: 4%;
     }
 }
