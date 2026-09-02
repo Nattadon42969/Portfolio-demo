@@ -80,23 +80,23 @@ nav {
     background: #006000;
     min-width: 160px;
     position: absolute;
-    top: 100%;                 /* วางต่อใต้ปุ่ม Menu ทันที */
+    top: 100%;
     left: 50%;
-    transform: translateX(-50%); /* จัดวางกึ่งกลางปุ่ม Menu */
+    transform: translateX(-50%);
     opacity: 0;
     visibility: hidden;
     z-index: 100;
-    border-radius: 8px;        /* มุมโค้งมน */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); /* เงาลอยนุ่มๆ */
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
     overflow: hidden;
-    transition: all 0.25s ease-in-out; /* แอนิเมชันการแสดงผล */
-    margin-top: 12px;           /* ระยะก่อนเด้งลงมา */
+    transition: all 0.25s ease-in-out;
+    margin-top: 12px;
 }
 
 .dropdown-menu.show {
     opacity: 1 !important;
     visibility: visible !important;
-    margin-top: 0px;            /* ขยับลงมาตำแหน่งจริงแบบนุ่มนวล */
+    margin-top: 0px;
 }
 
 .dropdown-menu ul {
@@ -315,6 +315,117 @@ a {
     color: black;
 }
 
+.Proudly {
+    font-size: 1.5rem;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.Certificate {
+    font-size: 1.5rem;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.Game-Creator-Certificate {
+    width: 80%;
+    height: auto;
+    margin-left: 11%;
+    margin-right: 40px;
+    margin-top: 40px;
+}
+
+.Text {
+    font-size: 1.8rem;
+    margin-left: 10%;
+    margin-right: 40px;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    display: grid;
+    text-align: center;
+}
+
+.Education {
+    font-size: 1.5rem;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.School {
+    margin-left: 12%;
+}
+
+.WithyaSuksa {
+    font-size: 1.5rem;
+    margin-left: 10%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.WithyaSuksa h2 {
+    margin-top: 25%;
+}
+
+.WithyaSuksa h2 p {
+    font-size: 2.2rem;
+    margin-top: 10%;
+}
+
+.WithyaSuksa h2 a {
+    color: #F3F4F6;
+}
+
+.WithyaSuksa-image {
+    width: 30vw;
+    height: auto;
+    margin-left: 20%;
+}
+
+.Kannasoot {
+    font-size: 1.5rem;
+    margin-left: 10%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.Kannasoot h2 {
+    margin-top: 25%;
+}
+
+.Kannasoot h2 p {
+    font-size: 2.2rem;
+    margin-top: 10%;
+}
+
+.Kannasoot h2 a {
+    color: #F3F4F6;
+}
+
+.Kannasoot-image {
+    width: 30vw;
+    margin-top: 40px;
+    height: auto;
+    margin-left: 20%;
+}
+
 @media screen and (max-width: 2049px) {
     .Name {
         flex-direction: column;
@@ -323,6 +434,48 @@ a {
     .Name h2 {
         font-size: 0.4rem;
         color: var(--primary-color);
+    }
+}
+
+@media screen and (max-width: 1688px) {
+    .WithyaSuksa h2 p {
+        font-size: 1.6rem;
+    }
+
+    .WithyaSuksa-image {
+        margin-left: 10%;
+    }
+
+    .Kannasoot h2 p {
+        font-size: 1.6rem;
+    }
+
+    .Kannasoot-image {
+        margin-left: 10%;
+    }
+}
+
+@media screen and (max-width: 1259px) {
+    .WithyaSuksa h2 p {
+        font-size: 1.4rem;
+    }
+
+    .WithyaSuksa-image {
+        margin-left: 4%;
+    }
+
+    .Kannasoot h2 p {
+        font-size: 1.4rem;
+    }
+
+    .Kannasoot-image {
+        margin-left: 4%;
+    }
+}
+
+@media screen and (max-width: 1113px) {
+    .School {
+        margin-left: 8%;
     }
 }
 
@@ -344,6 +497,12 @@ a {
 
     .Profile-family {
         margin-left: 348px;
+    }
+}
+
+@media screen and (max-width: 1037px) {
+    .School {
+        margin-left: 6%;
     }
 }
 
@@ -382,6 +541,46 @@ a {
 
     .Profile-family {
         margin-left: 280px;
+    }
+
+    .Education {
+        font-size: 1.4rem;
+    }
+
+    .Certificate {
+        font-size: 1.4rem;
+    }
+
+    .Proudly {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 1003px) {
+    .School {
+        margin-left: 4%;
+    }
+}
+
+@media screen and (max-width: 972px) {
+    .School {
+        margin-left: 2%;
+    }
+
+    .WithyaSuksa h2 p {
+        font-size: 1.125rem;
+    }
+
+    .WithyaSuksa-image {
+        margin-left: -4%;
+    }
+
+    .Kannasoot h2 p {
+        font-size: 1.125rem;
+    }
+
+    .Kannasoot-image {
+        margin-left: -4%;
     }
 }
 
@@ -442,6 +641,34 @@ a {
         width: 250px;
         height: 200px;
     }
+
+    .Certificate {
+        font-size: 1.2rem;
+    }
+
+    .Education {
+        font-size: 1.2rem;
+    }
+
+    .School {
+        margin-left: 1%;
+    }
+
+    .WithyaSuksa h2 p {
+        font-size: 1rem;
+    }
+
+    .WithyaSuksa-image {
+        margin-left: -6%;
+    }
+
+    .Kannasoot h2 p {
+        font-size: 1rem;
+    }
+
+    .Kannasoot-image {
+        margin-left: -6%;
+    }
 }
 
 @media screen and (max-width: 708px) {
@@ -478,6 +705,36 @@ a {
 
     .menu li:hover {
         width: 100px;
+    }
+}
+
+@media screen and (max-width: 689px) {
+    .Certificate {
+        font-size: 1rem;
+    }
+    
+    .Education {
+        font-size: 1rem;
+    }
+
+    .School {
+        margin-left: 0%;
+    }
+
+    .WithyaSuksa h2 p {
+        font-size: 0.8rem;
+    }
+
+    .WithyaSuksa-image {
+        margin-left: -14%;
+    }
+
+    .Kannasoot h2 p {
+        font-size: 0.8rem;
+    }
+
+    .Kannasoot-image {
+        margin-left: -14%;
     }
 }
 
@@ -532,6 +789,42 @@ a {
     .dropdown-menu ul li a:hover {
         background: #004600;
         width: 200%;
+    }
+
+    .Certificate {
+        font-size: 0.8rem;
+    }
+
+    .Proudly {
+        font-size: 0.8rem;
+    }
+
+    .Education {
+        font-size: 0.8rem;
+    }
+
+    .School {
+        margin-left: -2%;
+    }
+
+    .WithyaSuksa h2 p {
+        font-size: 0.57rem;
+    }
+
+    .WithyaSuksa-image {
+        margin-left: -14%;
+    }
+
+    .Kannasoot h2 p {
+        font-size: 0.57rem;
+    }
+
+    .Kannasoot h2 {
+        margin-top: 50%;
+    }
+
+    .Kannasoot-image {
+        margin-left: -14%;
     }
 }
 
